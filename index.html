@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Meme Generator</title>
+</head>
+
+<body onload="init()">
+    <div class="main-container">
+        <div class="nav-bar">
+            <h2 class="upper-title">memegen</h2>
+            <ul class="clean-list flex align-center">
+                <li><a href="#" class="gallery" onclick="onOpenGalary()">Gallery</a></li>
+                <li><a href="#" class="about">about</a></li>
+            </ul>
+            <!-- <div class="upper-buttons">
+                <button class="gallery" onclick="onOpenGalary()">Gallery</button> |
+                <button class="about">about</button>
+            </div> -->
+        </div>
+        <div class="editor">
+            <div class="canvas-container">
+                <canvas id="canvas" height="551" width="541"></canvas>
+            </div>
+            <div class="control-panel">
+                <input type="text" name="top-text" onfocus="this.value=''" onchange="onInsertTextLine(this.value)">
+                <div class="first-btn-row">
+                    <button> <img src="icons/button-down.png" onclick="onMoveLine(-20)" class="move-down"></button>
+                    <button> <img src="icons/button-up.png" onclick="onMoveLine(20)" class="move-up"></button>
+                    <button> <img src="icons/switch.png" onclick="onSwitchLine()" class="switch-lines"></button>
+                    <button> <img src="icons/add.png" onclick="onAddNewLine()" class="add-line"></button>
+                    <button> <img src="icons/trash.png" onclick="onDeleteLine()" class="delete-line"></button>
+                </div>
+                <div class="second-btn-row">
+                    <button> <img src="icons/increase font - icon.png" onclick="onFontSizeChange(20)"
+                            class="increase-font-btn"></button>
+                    <button> <img src="icons/decrease font - icon.png" onclick="onFontSizeChange(-20)"
+                            class="decrease-font-btn"></button>
+                    <button> <img src="icons/align-to-left.png" onclick="onAlignText('right')"
+                            class="align-left-btn"></button>
+                    <button> <img src="icons/center-text-alignment.png" onclick="onAlignText('center')"
+                            class="align-center-btn"></button>
+                    <button> <img src="icons/align-to-right.png" onclick="onAlignText('left')"
+                            class="align-right-btn"></button>
+                </div>
+                <div class="third-btn-row">
+                    <select name="select-fonts" onchange="onChangeFont(this.value)" class="select-fonts">
+                        <option value="impact">Impact</option>
+                        <option value="Arial">Arial</option>
+                    </select>
+                    <button> <img src="icons/text-stroke.png" onclick="onModifyTextStroke()"
+                            class="text-stroke"></button>
+                     <button class="color-picker">
+                         <input type="color" onchange="onModifyFontColor(this.value)">
+                         <img src="icons/font-color.png" class="font-color">                   
+                     </button>       
+                </div>
+                <select name="sticker-bar" class="sticker-bar">
+                    <option value="sticker1">Sticker</option>
+                    <option value="tbd">tbd</option>
+                </select>
+
+                <div class="lower-buttons">
+                    <button class="share">share</button>
+                    <a href="#" class="btn" onclick="downloadImg(this)" download="my-img.jpg">Download as jpeg</a>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-logo ">memegen</div>
+            <small class="small">all rights reserved 2019</small>
+        </footer>
+
+        <div class="images-gallery"></div>
+
+    </div>
+
+    <script src="js/memeService.js"></script>
+    <script src="js/memeControl.js"></script>
+</body>
+
+</html>

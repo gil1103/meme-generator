@@ -1,0 +1,263 @@
+* {
+    box-sizing: border-box;
+}
+button{
+    border-radius: 5px ;
+}
+
+.border{
+    border-style: solid ;
+    border-width: 1px;
+    border-color: gray;
+}
+
+/* HELPERS */
+
+/* flex-helpers */
+
+.flex {
+    display: flex;
+}
+
+.inline-flex {
+    display: inline-flex;
+}
+
+.flex.align-center {
+    align-items: center;
+}
+
+.flex.space-between {
+    justify-content: space-between;
+}
+
+/* list-helpers */
+
+.clean-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* main-container */
+.main-container{
+    display: flex;
+    flex-direction: column;
+    width: 1200px;   
+}
+
+/* nav-bar */
+.nav-bar{
+    display:flex;
+    width: 100%;
+    height: 66px;
+    background-color:  #ff7f00;
+    order:1;
+    justify-content: space-between;
+}
+
+.upper-title{
+    padding: 17px 57px 17px 49px;
+    margin:0;
+    font-size:22px ; 
+}
+
+.upper-buttons{
+    justify-content: right;
+    align-self: center;
+    justify-content: space-between;
+    margin-right: 57px;
+}
+
+
+
+/* --------------------------- */
+
+/* editor */
+.editor {
+    display:none;
+    justify-content: space-between;
+    justify-content: space-around;
+    height: 600px;
+    order:2;
+
+}
+
+/* canvas */
+.canvas-container{
+    margin-left: 51px;
+    margin-top: 26px;
+    /* flex-basis: 50%; */
+}
+
+canvas{
+    border: 1px solid black;
+}
+
+/* control-panel */
+
+.control-panel{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* first-btn-row */
+
+.first-btn-row {
+    display:flex;
+    justify-content: space-between;
+    justify-content: space-around;
+}
+
+input[name=top-text] {
+    width: 373px;
+    height: 63px;
+    margin-top: 37px;
+    font-family: Impact;
+    font-size: 20px;
+    align-self: center;
+    border-radius: 5px;
+}
+
+.move-down, .move-up, .switch-lines, .add-line, .delete-line {
+    height: 53px;
+    width: 53px;
+}
+
+/* second-btn-row */
+
+.second-btn-row {
+    display:flex;
+    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.increase-font-btn , .decrease-font-btn, .align-left-btn, .align-center-btn, .align-right-btn{
+    height: 53px;
+    width: 53px;
+}
+
+/* third-btn-row */
+.third-btn-row {
+    display:flex;
+    justify-content: space-between;
+}
+
+.select-fonts{
+    height: auto;
+    width: 47%;
+    font-size: 19px;
+    border-radius: 5px;
+}
+
+.text-stroke {
+    height: 60px;
+    width: 60px;
+}
+
+.font-color {
+    height: 60px;
+    width: 60px;
+}
+
+.color-picker{
+    position: relative;
+}
+
+input[type=color]{
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* --------------------------- */
+
+.sticker-bar{
+    height: 60px;
+    font-size: 19px;
+    border-radius: 5px;
+}
+.lower-buttons{
+    display:flex;
+    justify-items: space-between;
+}
+
+.share{
+    height: 60px;
+    width: 120px;
+    align-self: flex-end;
+    margin-bottom: 25px;
+    font-size:16px;
+}
+
+.btn {
+    background: #4267b2;
+    color: #fff;
+    cursor: pointer;
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0 5px;
+    user-select: none;
+    white-space: nowrap;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+    margin-bottom: 25px;
+    font-size:16px;
+  }
+
+/* Gallery */
+.images-gallery {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: aquamarine;
+    order:3;
+
+}
+
+.images-gallery img {
+    width: 100px;
+    margin-right: 20px;
+}
+
+/* footer */
+footer{
+    display:flex;
+    flex-direction:column;
+    background-color:  #ff7f00;
+    order:4;
+    height: 207px;
+    align-items: center;
+}
+
+.footer-logo{
+    padding-top: 77px;
+    margin:0;
+    font-size:22px ; 
+    justify-self: center;
+}
+
+.small{
+    padding-top: 16px;
+}
+
+/* Mobile */
+@media only screen and (max-width: 600px) {
+    .main-container{
+        width: 600px;
+    }
+
+    .editor {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .images-gallery img {
+        width: 200px;
+        margin-bottom: 10px;
+    }
+}
+
