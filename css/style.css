@@ -31,6 +31,24 @@ button{
     justify-content: space-between;
 }
 
+.gallery{
+    padding-right: 13px;
+    font-size: 15px;
+    text-decoration: none;
+    color:#ffffff;
+}
+
+.mid-line{
+     padding-right: 16px;
+}
+
+.about{
+    padding-right: 57px;
+    font-size: 15px;
+    text-decoration: none;
+    color:#ffffff; 
+}
+
 /* list-helpers */
 
 .clean-list {
@@ -69,8 +87,6 @@ button{
     margin-right: 57px;
 }
 
-
-
 /* --------------------------- */
 
 /* editor */
@@ -80,6 +96,7 @@ button{
     justify-content: space-around;
     height: 600px;
     order:2;
+    background-color: #ffc300;
 
 }
 
@@ -193,19 +210,26 @@ input[type=color]{
     font-size:16px;
 }
 
-.btn {
-    background: #4267b2;
-    color: #fff;
+ .download-btn {
+    background-color: rgb(232 232 232);
+    border-radius: 5px;
     cursor: pointer;
-    font-family: Helvetica, Arial, sans-serif;
-    margin: 0 5px;
+    font: 400 13.3333px Arial;
+    margin: 0 20px;
     user-select: none;
     white-space: nowrap;
-    padding: 5px 10px;
-    border-radius: 3px;
     text-decoration: none;
     margin-bottom: 25px;
-    font-size:16px;
+    font-size: 16px;
+    color: -internal-light-dark(black, white);
+    appearance: button;
+    border-width: 2px;
+    border-radius: 5px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    padding-top: 19px;
+    color: black;
+    border-color: black;
   }
 
 /* Gallery */
